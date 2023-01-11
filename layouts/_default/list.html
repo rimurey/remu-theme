@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ range .Pages.ByPublishDate.Reverse }}
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center mb-2">
+        <h3 class="fs-6 mb-0 d-flex align-items-center">
+          <a class="title text text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        {{ partial "metadata.html" . }}
+      </li>
+    </ul>
+{{ end }}
+{{ end }}

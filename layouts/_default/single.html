@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="post">
+  <h1>{{ .Title }}</h1>
+  <div class="border ps-2 pe-2 rounded mb-3 mt-3" style="font-size: 0.9rem">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <td>
+            <span class="text-secondary">Table of Contents</span>
+          </td>
+        </tr>
+      </thead>
+      <tbody style="border-style: none">
+        <tr style="border-style: none">
+          <td style="border-style: none; padding-bottom: 0">
+          {{ .TableOfContents }}
+          </td>
+        </tr>
+      </tbody>
+     </table>
+  </div>
+  {{ .Content }}
+  <hr class="border opacity-75 mt-4 mb-4">
+  {{ partial "metadata.html" . }}
+  <br> <br> <br>
+  <div class="container-sm mb-2" style="max-width: 720px">
+    {{- partial "giscus.html" . -}}
+  </div>
+</div>
+{{ end }}

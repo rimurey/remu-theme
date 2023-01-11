@@ -1,0 +1,23 @@
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+<div class="metadata d-flex align-items-center">
+  <div class="time">
+    <time datetime="{{ $dateTime }}" class="" style="font-size: 0.9rem">{{ .PublishDate.Format $dateFormat }}</time>
+  </div>
+  {{ if .Params.tags }}
+    <div class="vr ms-2 me-2"></div>
+    <span class="me-1" style="font-size: 0.9rem">Tags:</span>
+    <div class="tags">
+      {{ with .Params.tags }}
+        {{ range . }}
+          {{ $href := print (absURL "tags/") (urlize .) }}
+          <a
+            class="text text-decoration-none btn btn-outline-dark"
+            style="--bs-btn-padding-y: .1rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .8rem;"
+            href="{{ $href }}"
+          ><i class="fa-solid fa-tag"></i> {{ . }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

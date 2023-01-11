@@ -1,0 +1,68 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+.recent-post-detail > p {
+  margin-bottom: 0 !important;
+}
+
+nav#TableOfContents > ul {
+  padding-left: 1.2rem!important;
+}
+nav#TableOfContents  ul {
+  padding-left: 0.5rem;
+}
+
+.post h2 {
+  border-bottom: var(--bs-border-width) solid #d5d5d5;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.post h3 {
+  border-bottom: var(--bs-border-width) solid #e1e1e1;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.post h4 {
+  font-size: 1.25rem;
+}
+
+.post h5 {
+  font-size: 1rem;
+}
+
+.post h6 {
+  font-size: 0.875rem;
+}
+
+.highlight {
+  margin-top: 1rem;
+}
+
+.highlight > pre {
+  border-radius: 5px;
+  border: var(--bs-border-width) var(--bs-border-style) #d5d5d5;
+  padding: 0.5rem 0.7rem;
+}
+
+.highlight > pre > code > span > span:nth-child(1) {
+  border-right: 1px solid #d5d5d5;
+  padding: 0 0.8em 0 0 !important;
+}
+.highlight > pre > code > span > span:nth-child(2) {
+  padding-left: 0.4em;
+}
